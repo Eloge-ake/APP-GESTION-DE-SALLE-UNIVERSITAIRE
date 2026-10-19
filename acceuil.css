@@ -1,0 +1,365 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4470ff;
+    --primary-light: #7292ff;
+    --white: #ffffff;
+    --text-muted: #d1d9e8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #101a30;
+}
+
+/* =========================
+   PAGE PRINCIPALE
+========================= */
+
+main {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 24px;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(173, 173, 173, 0.88),
+            rgba(188, 188, 189, 0.66),
+            rgba(194, 194, 194, 0.88)
+        ),
+        url("7bac467c-deba-4ca2-9622-e3c6fc370972.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.page-content {
+    width: 100%;
+    max-width: 680px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 32px;
+
+    text-align: center;
+
+    animation: apparition 0.8s ease both;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-container {
+    width: 112px;
+    height: 112px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.2),
+        0 0 35px rgba(68, 112, 255, 0.15);
+
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+.imgLogo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    color: #e1e9ff;
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    backdrop-filter: blur(12px);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #76a0ff;
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px #76a0ff;
+}
+
+/* =========================
+   TITRE
+========================= */
+
+h1 {
+    color: var(--white);
+
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    letter-spacing: -2.5px;
+}
+
+.mt {
+    color: var(--primary-light);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.paragraphe {
+    max-width: 460px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* =========================
+   BOUTON
+========================= */
+
+.btns-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.btn {
+    min-height: 58px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px 24px;
+
+    color: var(--white);
+    background: var(--primary);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(68, 112, 255, 0.28);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    background: #345eea;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(68, 112, 255, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 5px;
+}
+
+.plus {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+.caption {
+    color: #aebbd2;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================
+   INFORMATIONS EN BAS
+========================= */
+
+.bottom-info {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    main {
+        padding: 40px 20px 75px;
+    }
+
+    .page-content {
+        gap: 27px;
+    }
+
+    .logo-container {
+        width: 92px;
+        height: 92px;
+        border-radius: 24px;
+    }
+
+    .intro {
+        gap: 17px;
+    }
+
+    h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        letter-spacing: -1.5px;
+    }
+
+    .paragraphe {
+        max-width: 340px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 15px 18px;
+        font-size: 14px;
+    }
+
+    .bottom-info {
+        bottom: 18px;
+        left: 20px;
+        right: 20px;
+
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+}
+
+/* Respecte les préférences d'accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

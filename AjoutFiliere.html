@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="AjoutFiliere.css">
+    <title>Ajouter une filière</title>
+</head>
+<body>
+
+<main>
+    <form action="" class="formulaire">
+
+        <header class="form-header">
+            <div class="icone">＋</div>
+            <p class="surtitre">GESTION UNIVERSITAIRE</p>
+            <h1>Ajouter une filière</h1>
+            <p class="description">
+                Renseignez les informations de la nouvelle filière.
+            </p>
+        </header>
+
+        <div class="champs">
+            <div class="champ">
+                <label for="nomFiliere">Nom de la filière</label>
+                <input type="text" id="nomFiliere"
+                       name="nomFiliere"
+                       placeholder="Ex. : Informatique"
+                       required>
+            </div>
+
+            <div class="champ">
+                <label for="codeFiliere">Code de la filière</label>
+                <input type="text" id="codeFiliere"
+                       name="codeFiliere"
+                       placeholder="Ex. : INFO-L1"
+                       required>
+            </div>
+
+            <div class="champ">
+                <label for="effectifFiliere">Effectif prévu</label>
+                <input type="number" id="effectifFiliere"
+                       name="effectifFiliere"
+                       min="0" placeholder="Ex. : 45"
+                       required>
+            </div>
+
+            <div class="champ">
+                <label for="responsableFiliere">
+                    Responsable de la filière
+                </label>
+                <input type="text" id="responsableFiliere"
+                       name="responsableFiliere"
+                       placeholder="Nom du responsable"
+                       required>
+            </div>
+
+            <div class="champ champ-large">
+                <label for="descriptionArea">
+                    Description <span>(facultatif)</span>
+                </label>
+                <textarea name="descriptionArea"
+                          id="descriptionArea"
+                          rows="3"
+                          placeholder="Présentez brièvement cette filière..."></textarea>
+            </div>
+        </div>
+
+        <fieldset class="exigences">
+            <legend>Besoins en équipements</legend>
+            <p class="aide">
+                Précisez les équipements nécessaires aux cours.
+            </p>
+
+            <div class="besoins">
+                <div class="besoin">
+                    <input type="radio" name="projecteur"
+                           id="ouiProjecteur" value="oui" required>
+                    <label for="ouiProjecteur">Projecteur nécessaire</label>
+                </div>
+
+                <div class="besoin">
+                    <input type="radio" name="projecteur"
+                           id="nonProjecteur" value="non">
+                    <label for="nonProjecteur">Non nécessaire</label>
+                </div>
+
+                <div class="besoin">
+                    <input type="radio" name="prise"
+                           id="ouiPrise" value="oui" required>
+                    <label for="ouiPrise">Prises fonctionnelles nécessaires</label>
+                </div>
+
+                <div class="besoin">
+                    <input type="radio" name="prise"
+                           id="nonPrise" value="non">
+                    <label for="nonPrise">Non indispensable</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" id="submitButton">
+            Ajouter la filière <span>→</span>
+        </button>
+
+        <p class="note">Vérifiez les informations avant validation.</p>
+
+    </form>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="AjoutFiliere.js"></script>
+
+</body>
+</html>
